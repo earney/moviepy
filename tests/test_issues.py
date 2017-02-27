@@ -32,6 +32,13 @@ def test_issue_145():
     with pytest.raises(Exception, message="Expecting Exception"):
          _final = concatenation([_video], method = 'composite')
 
+def test_issue_285():
+     clip_1 = ImageClip('media/python_logo.png', duration=10)
+     clip_2 = ImageClip('media/python_logo.png', duration=10)
+     clip_3 = ImageClip('media/python_logo.png', duration=10)
+
+     merged_clip = concatenate_videoclips([clip_1, clip_2, clip_3])
+
 def test_issue_407():
     _red = ColorClip((800, 600), col=(255,0,0)).set_duration(5)
     _red.fps=30
