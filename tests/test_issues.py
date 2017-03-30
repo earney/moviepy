@@ -146,6 +146,17 @@ def test_issue_470():
     subclip = audio_clip.subclip(t_start=6, t_end=8)
     subclip.write_audiofile(os.path.join(TMP_DIR, 'issue_470.wav'), write_logfile=True)
 
+def test_issue_512():
+    #print("before testVid")
+    def testVid():
+        #print ("Hello!")
+        clip = VideoFileClip("media/big_buck_bunny_0_30.webm").subclip(1.0,5.0)
+        #print(clip.duration)
+        clip.write_videofile(os.path.join(TMP_DIR, "subclip_test.mp4"))
+        del clip
+    def run():
+        testVid()
+    run()
 
 if __name__ == '__main__':
    pytest.main()

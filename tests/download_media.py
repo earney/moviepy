@@ -28,6 +28,9 @@ def download():
     download_url("https://github.com/earney/moviepy_media/raw/master/tests/videos/big_buck_bunny_432_433.webm",
                  "media/big_buck_bunny_432_433.webm")
 
+    download_url("https://github.com/earney/moviepy_media/raw/master/tests/videos/big_buck_bunny_0_30.webm",
+                 "media/big_buck_bunny_0_30.webm")
+
     download_url("https://github.com/earney/moviepy_media/raw/master/tests/sounds/crunching.mp3",
                  "media/crunching.mp3")
 
